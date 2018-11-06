@@ -1,6 +1,6 @@
 # MiniProgram_Deebug_V1.0
 ## Mini Program Code  
-Thanks to ___Xuejiao Wang, [Xue Guo](https://github.com/sherixue), [Yanni Ren](https://github.com/YanniREN), [Weijie Liu](https://github.com/autoliuweijie), Teng Liu, Sheng Han,Chenchen Qiu, Congchong Nie and Jiyuan Lu___  
+Thanks to ___Xuejiao Wang, [Xue Guo](https://github.com/sherixue), [Yanni Ren](https://github.com/YanniREN), [Weijie Liu](https://github.com/autoliuweijie), Teng Liu, Sheng Han, Chenchen Qiu, Congchong Nie and Jiyuan Lu.___  
 <div align=center><img src="https://github.com/sunhow/MiniProgram_Deebug_V1.0/blob/master/Screenshoot/MiniProgramCode.jpg"/></div>
 
 ## Main Functions  
