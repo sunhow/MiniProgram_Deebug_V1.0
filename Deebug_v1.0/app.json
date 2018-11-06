@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/search_result/seach_result",
+    
+    
+    "pages/result_swiper/result_swiper",
+    "pages/search_page/search_page",
+    "pages/camera/camera",
+    "pages/search_detail/search_detail",
+
+    
+   
+    "pages/index/index",
+    "pages/logs/logs",
+    
+    
+    "pages/list/list"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "农作物小医生",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "selectedColor": "#203a2d",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "识图",
+        "iconPath": "/image/home.png",
+        "selectedIconPath": "/image/home_selected.png"
+      },
+      {
+        "pagePath": "pages/search_page/search_page",
+        "text": "搜索",
+        "iconPath": "/image/query.png",
+        "selectedIconPath": "/image/query_selected.png"
+      },
+      {
+        "pagePath": "pages/list/list",
+        "text": "Bug",
+        "iconPath": "/image/me.png",
+        "selectedIconPath": "/image/me_selected.png"
+      }
+    ]
+  }
+
+}
+

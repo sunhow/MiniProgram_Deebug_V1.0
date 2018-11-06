@@ -1,0 +1,131 @@
+<loading hidden="{{loading_hide}}">
+努力查询中...
+</loading>
+
+
+<view style="display:{{error_code? 'none':''}}">
+
+<view class='button_fix'>
+<view style='margin-top:8%;display:flex;justify-content:space-around;'>
+<button style="background-color:#203a2d;width:300rpx;height:80rpx;vertical-align:middle;font-size:35rpx;opacity: 0.9" bindtap='back_to_home'><text style='color: white;'>回到主页</text></button>
+ <button style="background-color:#203a2d;width:300rpx;height:80rpx;vertical-align:middle;font-size:35rpx;opacity: 0.9" open-type="share"><text style='color: white;'>分享给朋友</text></button>
+</view>
+</view>
+
+<!-- 病虫害介绍的界面-->
+<view style="display:{{isDisease? '':'none'}}">
+<!-- 图片位置 -->
+<view style='text-align: center;margin-top:5%;'>  
+<image class="pd_image" src='{{image}}'></image>
+</view>
+
+<!-- 文本区域 -->
+<view style='margin-left:10%;margin-right:10%;'>
+<!-- 题目区域 -->
+<view style='border-bottom:5rpx #dbe4e0 solid;margin-top:5%;'>
+<view><text style='color:black;font-weight:bold;font-size:60rpx;letter-spacing:1rpx;'>{{dname}}</text></view>
+<view style='margin-top:2%'><text style='color:#9aa6a0;font-size:35rpx;letter-spacing:0rpx;'>危害对象:{{dobject}}</text></view>
+</view>
+
+<!-- 正文区域 -->
+<!-- block -->
+<view style='margin-top:5%'>
+<view><text style='color:#203a2d;font-size:38rpx;font-weight:bold;letter-spacing:2rpx;'>病害位置</text></view>
+<view style='margin-top:2%'><text style='color:black;font-size:35rpx;letter-spacing:1rpx;'>{{dlocation}}</text></view>
+</view>
+
+<!-- block -->
+<view style='margin-top:5%'>
+<view><text style='color:#203a2d;font-size:38rpx;font-weight:bold;letter-spacing:2rpx;'>病害症状</text></view>
+<view style='margin-top:2%'><text class='main_body'>{{dsymptom}}</text></view>
+</view>
+
+<!-- block -->
+<view style='margin-top:5%'>
+<view><text style='color:#203a2d;font-size:38rpx;font-weight:bold;letter-spacing:2rpx;'>病害时间/条件</text></view>
+<view style='margin-top:2%'><text class='main_body'>{{dcondition}}</text></view>
+</view>
+
+<!-- block -->
+<view style='margin-top:5%'>
+<view><text style='color:#203a2d;font-size:38rpx;font-weight:bold;letter-spacing:2rpx;'>多发地理区域</text></view>
+<view style='margin-top:2%'><text class='main_body'>{{darea}}</text></view>
+</view>
+
+<!-- block -->
+<view style='margin-top:5%'>
+<view><text style='color:#203a2d;font-size:38rpx;font-weight:bold;letter-spacing:2rpx;'>危害防治</text></view>
+<view style='margin-top:2%'><text class='main_body'>{{dtreatment}}</text></view>
+</view>
+
+</view>
+</view>
+
+
+<!-- 植株介绍的界面 -->
+<view style="display:{{isDisease? 'none':''}}">
+<!-- 图片位置 -->
+<view style='text-align: center;margin-top:5%;'>  
+<image class="pd_image" src='{{image}}'></image>
+</view>
+
+<!-- 文本区域 -->
+<view style='margin-left:10%;margin-right:10%;'>
+<!-- 题目区域 -->
+<view style='border-bottom:5rpx #dbe4e0 solid;margin-top:7%;'>
+<view><text style='color:black;font-weight:bold;font-size:60rpx;letter-spacing:1rpx;'>{{pname}}</text></view>
+<view style='margin-top:2%'><text style='color:#9aa6a0;font-size:35rpx;letter-spacing:0rpx;'>别名:{{other_name}}</text></view>
+</view>
+
+<!-- 正文区域 -->
+<!-- block -->
+<view style='margin-top:9%'>
+<view><text style='color:#203a2d;font-size:38rpx;font-weight:bold;letter-spacing:2rpx;'>种植区域</text></view>
+<view style='margin-top:2%'><text class='main_body'>{{parea}}</text></view>
+</view>
+
+<!-- block -->
+<view style='margin-top:5%'>
+<view><text style='color:#203a2d;font-size:38rpx;font-weight:bold;letter-spacing:2rpx;'>种植时间</text></view>
+<view style='margin-top:2%'><text class='main_body'>{{ptime}}</text></view>
+</view>
+
+<!-- block -->
+<view style='margin-top:5%;'>
+<view><text style='color:#203a2d;font-size:38rpx;font-weight:bold;letter-spacing:2rpx;'>营养价值</text></view>
+<view style='margin-top:2%'><text class='main_body'>{{pnutrition}}</text></view>
+</view>
+
+</view>
+</view>
+
+<view style='height:20%;text-align: center;margin-left:10%;margin-right:10%;margin-top:5%;margin-bottom:20%;border-top:5rpx #dbe4e0 solid'></view>
+<view style='text-align: center;margin-left:10%;margin-right:10%;margin-top:10%;margin-bottom:15%;border-top:5rpx #dbe4e0 solid'></view>
+
+</view>
+
+
+<view style="display:{{error_code? '':'none'}};">
+<view style='margin-top:35%;text-align: center;'>
+<image src='/image/unknow_icon.png' style='height: 175rpx;width: 309rpx;'></image>
+</view>
+<view style='text-align: center;margin-top:15%'><text style='color:#203a2d;font-size:50rpx;letter-spacing:1rpx;'>抱歉</text>
+</view>
+<view style='text-align: center;margin-top:5%'><text style='color:#203a2d;font-size:40rpx;letter-spacing:1rpx;'>没有找到您想要的结果</text>
+</view>
+<view style='text-align: center;margin-top:5%'>
+<text style='color:#203a2d;font-size:40rpx;letter-spacing:1rpx;'>试着去问下小bug吧~</text></view>
+<view style='text-align: center;margin-top:5%'>
+
+<view class='button_fix'>
+<view style='margin-top:8%;display:flex;justify-content:space-around;'>
+<button style="background-color:#203a2d;width:300rpx;height:80rpx;vertical-align:middle;font-size:35rpx;opacity:0.9" bindtap='back_to_home' ><text style='color: white;'>回到主页</text></button>
+ <button style="background-color:#203a2d;width:300rpx;height:80rpx;vertical-align:middle;font-size:35rpx;opacity:0.9" bindtap='goto_bug' ><text style='color: white;'>去问bug~</text></button>
+</view>
+</view>
+</view>
+</view>
+
+
+
+

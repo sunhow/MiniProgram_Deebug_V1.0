@@ -1,0 +1,41 @@
+@import "chat-send-status.wxss";
+@import "voice.wxss";
+@import "time.wxss";
+.isMyWordStyle {
+    background-color: #d7e2e8;
+    color: #213d52;
+    margin-right: -50rpx;
+    margin-left: 14rpx;
+    border-radius: 22rpx;
+    border-bottom-right-radius: 0rpx;
+}
+
+.isOtherWordStyle {
+    background-color: #a1d0bf;
+    color: #333333;
+    margin-right: 14rpx;
+    margin-left: -50rpx;
+    border-radius: 22rpx;
+    border-bottom-left-radius: 0rpx;
+}
+
+.chat-list-pic-style {
+    border-radius: 10rpx;
+    margin-left: 5rpx;
+    width: 150rpx;
+    height: 280rpx;
+}
+
+.voice-duration-style {
+    color: #666666;
+    font-size: 26rpx;
+    align-self: center;
+    margin-top: 3rpx;
+    margin-left: 5rpx;
+}
+
+.chat-list-arrow-style {
+    width: 11rpx;
+    height: 20rpx;
+    margin-top: 25rpx
+}

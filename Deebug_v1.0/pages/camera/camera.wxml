@@ -1,0 +1,25 @@
+<!--pages/camera/camera.wxml-->
+<camera mode="normal" device-position="back" flash="auto" binderror="error" style="width: 100%; height: 600rpx; margin-top: 100rpx">
+   
+  <cover-view> 
+  <cover-image style="width: 100%; height: 600rpx;" src="{{src}}"></cover-image>
+  </cover-view>
+
+</camera>
+    
+
+<view class='text_style'>
+<text>请将要识别的图像置于取景框内</text>
+</view>
+
+
+<view class='options'>
+
+<view bindtap="reset" style="display:{{optionVis ? 'center':'none'}}"><image style='height:150rpx;width:150rpx'src='/image/retake.png'></image></view>
+<view style='margin-left:5%;' bindtap="takePhoto" style="display:{{takePhotiVis ? 'center':'none'}}"><image style='height:150rpx;width:150rpx;'src='/image/camera.png'></image></view>
+<view style='margin-left:5%;' bindtap="confirm" style="display:{{optionVis ? 'center':'none'}}"><image style='height:150rpx;width:150rpx;'src='/image/upload.png'></image></view>
+
+</view>
+
+
+

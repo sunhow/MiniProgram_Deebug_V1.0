@@ -1,0 +1,19 @@
+/* pages/search_result/seach_result.wxss */
+.pd_image{
+  height: 350rpx;
+  width: 650rpx;
+  align-content: center;
+}
+
+.main_body{
+  color:black;font-size:31rpx;letter-spacing:1rpx;line-height:47rpx;
+}
+
+.button_fix {
+  position: fixed;
+  bottom: 5%;
+  width: 90%;
+  margin-left:5%; 
+  text-align: center;
+opacity: 0.5
+}

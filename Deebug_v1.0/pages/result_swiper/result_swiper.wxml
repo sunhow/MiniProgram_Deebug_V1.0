@@ -1,0 +1,228 @@
+<loading hidden="{{loading_hide}}">
+努力匹配中...
+</loading>
+
+<!-- 判断是不是imagenet 不是！ -->
+
+<view style="display:{{image_net? 'none':''}}">
+
+<!-- 判断是不是top1很高？ 不是 -->
+
+<view style="display:{{top1_high? 'none':''}}">
+<!-- 设置swiper-card的位置 -->
+<view class='swiper-section'>
+      <!-- top1_card -->
+      <swiper style='height:{{viewHeight}}px'>
+          <swiper-item>
+            <view style='text-align: center;margin-top:15%;'><image style='height:90rpx;width:277rpx;' src='/image/1.png'></image></view>
+            
+            <view class="swiper-item" style='height:{{winHeight}}px'>
+            <image class='pic_style' src='{{top1_image}}'></image>
+            <view style='margin-top:5%;text-align:center;'>
+              <text class='text1'>{{top1_pname}}\t</text>
+               <text class='text2'>\t{{top1_disease}}</text>
+            </view>
+
+            <view style='margin-left:41%;margin-top:5%;'><text style='color:#203a2d;font-size:small;'>可信度</text></view>
+            <view style='width:100%;height:100%;text-align:center;'>
+              <view animationstart="water" class="main">
+                <view class="circle" style='background-position-y:{{top1_rate}}'>
+                <view style='margin-top:20%'><text class="perc">{{top1_score}}</text></view>
+                </view>
+               </view>
+            </view>
+            </view>
+            <button bindtap='more_detail' class='button_detail' data-text='{{top1_pname}}{{top1_disease}}'>查看详细内容</button>
+          </swiper-item>
+
+          <!-- top2_card -->
+          <swiper-item>
+          <view style='text-align: center;margin-top:15%;'><image style='height:90rpx;width:277rpx;' src='/image/2.png'></image></view>
+            <view class="swiper-item" style='height:{{winHeight}}px'>
+            <image class='pic_style' src='{{top2_image}}'></image>
+            <view style='margin-top:5%;text-align:center;'>
+              <text class='text1'>{{top2_pname}}\t</text>
+               <text class='text2'>\t{{top2_disease}}</text>
+            </view>
+
+            <view style='margin-left:41%;margin-top:5%;'><text style='color:#203a2d;font-size:small;'>可信度</text></view>
+            <view style='width:100%;height:100%;text-align:center;'>
+              <view animationstart="water" class="main">
+                <view class="circle" style='background-position-y:{{top2_rate}}'>
+                <view style='margin-top:20%'><text class="perc">{{top2_score}}</text></view>
+                </view>
+               </view>
+            </view>
+            </view>
+            <button bindtap='more_detail' class='button_detail' data-text='{{top2_pname}}{{top2_disease}}'>查看详细内容</button>
+          </swiper-item>
+
+          <!-- top3-card -->
+          <swiper-item>
+          <view style='text-align: center;margin-top:15%;'><image style='height:90rpx;width:277rpx;' src='/image/3.png'></image></view>
+            <view class="swiper-item" style='height:{{winHeight}}px'>
+            <image class='pic_style' src='{{top3_image}}'></image>
+            <!-- 植物种类、疾病名称 -->
+            <view style='margin-top:5%;text-align:center;'>
+              <text class='text1'>{{top3_pname}}\t</text>
+               <text class='text2'>\t{{top3_disease}}</text>
+            </view>
+
+            <view style='margin-left:41%;margin-top:5%;'><text style='color:#203a2d;font-size:small;'>可信度</text></view>
+            <view style='width:100%;height:100%;text-align:center;'>
+              <view animationstart="water" class="main">
+                <view class="circle" style='background-position-y:{{top3_rate}}'>
+                <view style='margin-top:20%'><text class="perc">{{top3_score}}</text></view>
+                </view>
+               </view>
+            </view>
+            </view>
+            <button bindtap='more_detail' class='button_detail' data-text='{{top3_pname}}{{top3_disease}}'>查看详细内容</button>
+          </swiper-item>
+
+
+          <!-- 反馈页面 -->
+           <swiper-item style="display:''">
+           <view style='text-align: center;margin-top:15%;'><image style='height:90rpx;width:277rpx;' src='/image/4.png'></image></view>
+            <view class="swiper-item" style='height:{{winHeight}}px'>
+            <image class='pic_style' src='{{tmp_filePath}}'></image>
+            <!-- 植物种类、疾病名称 -->
+            <view style='margin-top:5%;text-align:center;'>
+              <text class='text1'>\t结果不准确？</text>
+            </view>
+
+            <view style='margin-left:41%;margin-top:5%;'><text style='color:#203a2d;font-size:small;'>可信度</text></view>
+            <view style='margin-top:5%;width:100%;height:100%;text-align:center;'>
+              <image src='/image/unknow_icon.png' style='height: 122.5rpx;width: 216.3rpx;'></image>
+            </view>
+            </view>
+            <button bindtap="modalinput" class='button_detail'>上传您的图片与标签</button>
+
+             
+          </swiper-item>
+        
+      </swiper>
+<modal hidden="{{hiddenmodalput}}" title="请输入您上传图片的标签" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+<input type='text'placeholder="请输入内容" />  
+</modal> 
+</view>
+</view>
+
+<!-- top1是不是很高？ 是！ -->
+<view style="display:{{top1_high? '':'none'}}">
+<!-- 设置swiper-card的位置 -->
+<view class='swiper-section'>
+      <!-- top1_card -->
+      <swiper style='height:{{viewHeight}}px'>
+      <!-- <swiper indicator-dots='true' style='height:{{viewHeight}}px' class='swiper-box'> -->
+          <swiper-item>
+            <view style='text-align: center;margin-top:15%;'><image style='height:80rpx;width:180rpx;' src='/image/1-high.png'></image></view>
+            
+            <view class="swiper-item" style='height:{{winHeight}}px'>
+            <image class='pic_style' src='{{top1_image}}'></image>
+            <!-- 植物种类、疾病名称 -->
+            <view style='margin-top:5%;text-align:center;'>
+              <text class='text1'>{{top1_pname}}\t</text>
+               <text class='text2'>\t{{top1_disease}}</text>
+              <!-- <button style='background-color:#203a2d' type="primary" size="mini">{{top1_pname}}</button>
+              <button style='background-color:white' type="default" size="mini">{{top1_disease}}</button> -->
+            </view>
+
+            <view style='margin-left:41%;margin-top:5%;'><text style='color:#203a2d;font-size:small;'>可信度</text></view>
+            <view style='width:100%;height:100%;text-align:center;'>
+              <view animationstart="water" class="main">
+                <view class="circle" style='background-position-y:{{top1_rate}}'>
+                <view style='margin-top:20%'><text class="perc">{{top1_score}}</text></view>
+                </view>
+               </view>
+            </view>
+
+            </view>
+            <button bindtap='more_detail' class='button_detail' data-text='{{top1_pname}}{{top1_disease}}'>查看详细内容</button>
+          </swiper-item>
+
+          <!-- 反馈页面 -->
+           <swiper-item style="display:''">
+           <view style='text-align: center;margin-top:15%;'><image style='height:80rpx;width:180rpx;' src='/image/4-high.png'></image></view>
+            <view class="swiper-item" style='height:{{winHeight}}px'>
+            <!-- <image class='pic_style' src='/image/unknow.png'></image> -->
+            <image class='pic_style' src='{{tmp_filePath}}'></image>
+            <!-- 植物种类、疾病名称 -->
+           <view style='margin-top:5%;text-align:center;'>
+              <text class='text1'>\t结果不准确？</text>
+            </view>
+
+            <view style='margin-left:41%;margin-top:5%;'><text style='color:#203a2d;font-size:small;'>可信度</text></view>
+            <view style='margin-top:5%;width:100%;height:100%;text-align:center;'>
+              <image src='/image/unknow_icon.png' style='height: 122.5rpx;width: 216.3rpx;'></image>
+            </view>
+            </view>
+            <button bindtap="modalinput" class='button_detail'>上传您的图片与标签</button>
+
+              
+          </swiper-item>
+        
+      </swiper>
+<modal hidden="{{hiddenmodalput}}" title="请输入您上传图片的标签" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+<input type='text'placeholder="请输入内容" />  
+</modal>
+</view>
+</view>
+</view>
+
+<!-- 是不是imagenet 是！ -->
+<view style="display:{{image_net? '':'none'}}">
+<view class='swiper-section'>
+      <!-- top1_card -->
+      <swiper style='height:{{viewHeight}}px'>
+      <!-- <swiper indicator-dots='true' style='height:{{viewHeight}}px' class='swiper-box'> -->
+          <swiper-item>
+            <view style='text-align: center;margin-top:15%;'><image style='height:80rpx;width:180rpx;' src='/image/1-high.png'></image></view>
+            
+            <view class="swiper-item" style='height:{{winHeight}}px'>
+            <image class='pic_style' src='{{tmp_filePath}}'></image>
+            <!-- 植物种类、疾病名称 -->
+            <view style='margin-top:5%;text-align:center;'>
+              <text class='text1'>莫不是:\t</text>
+              <text class='text2'>{{imagenet_name}}</text>
+            </view>
+
+            <view style='margin-left:41%;margin-top:5%;'><text style='color:#203a2d;font-size:small;'>逗我？</text></view>
+            <view style='margin-top:5%;width:100%;height:100%;text-align:center;'>
+              <image src='/image/unknow_icon.png' style='height: 122.5rpx;width: 216.3rpx;'></image>
+            </view>
+            </view>
+            <button bindtap='douwo' class='button_detail' data-text='{{top1_pname}}{{top1_disease}}'>查看详细内容</button>
+          </swiper-item>
+
+          <!-- 反馈页面 -->
+           <swiper-item style="display:''">
+           <view style='text-align: center;margin-top:15%;'><image style='height:80rpx;width:180rpx;' src='/image/4-high.png'></image></view>
+            <view class="swiper-item" style='height:{{winHeight}}px'>
+            <!-- <image class='pic_style' src='/image/unknow.png'></image> -->
+            <image class='pic_style' src='{{tmp_filePath}}'></image>
+            <!-- 植物种类、疾病名称 -->
+            <view style='margin-top:5%;text-align:center;'>
+              <text class='text1'>\t结果不准确？</text>
+            </view>
+
+            <view style='margin-left:41%;margin-top:5%;'><text style='color:#203a2d;font-size:small;'>可信度</text></view>
+            <view style='margin-top:5%;width:100%;height:100%;text-align:center;'>
+              <image src='/image/unknow_icon.png' style='height: 122.5rpx;width: 216.3rpx;'></image>
+            </view>
+            </view>
+            <button bindtap="modalinput" class='button_detail'>上传您的图片与标签</button>
+
+              
+          </swiper-item>
+        
+      </swiper>
+<modal hidden="{{hiddenmodalput}}" title="请输入您上传图片的标签" confirm-text="提交" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+<input type='text'placeholder="请输入内容" />  
+</modal>
+</view>
+</view>
+
+
+
+

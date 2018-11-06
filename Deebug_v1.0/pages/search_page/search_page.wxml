@@ -1,0 +1,32 @@
+<!--pages/search_page/search_page.wxml-->
+<view style='margin-top:15%;text-align: center;'>
+<image src='/image/logo2-1.png' style='height: 172.2rpx;width: 233.8rpx;'></image>
+</view>
+
+<view class='search_filed'>
+<view style='margin-top:13rpx;width:80%;margin-left:5%'>
+<!-- <input bindfocus="SerchFocus" placeholder-class="place-holder" class="Search-input" placeholder="点击输入您想查询的内容" /> -->
+<view bindtap="SerchFocus" class="Search-input"><text>点击输入您想查询的内容</text></view>
+</view>
+<view bindtap="SerchFocus" style='margin-left:20rpx;width:20%;'><image style='height: 120rpx;width: 120rpx;' src='/image/search.png'></image></view>
+</view>
+
+<view class="hot-point">
+<view><text style='font-weight:bold;color:#99a7a0;font-size:30rpx;letter-spacing:3rpx;margin-left:5%'>大家都在搜</text></view>
+
+<view style='display:flex;justify-content:center;margin-top:30rpx;'>
+<view bindtap='pressView' class="hot-content" data-text="番茄">番茄</view>
+<view bindtap='pressView' class="hot-content" data-text="辣椒疮痂病">辣椒疮痂病</view>
+<view bindtap='pressView' class="hot-content" data-text="柑桔黄龙病">柑桔黄龙病</view>
+</view>
+<view style='display:flex;justify-content:center;'>
+<view bindtap='pressView' class="hot-content" data-text="番茄晚疫病菌">番茄晚疫病菌</view>
+<view bindtap='pressView' class="hot-content" data-text="番茄白粉病">番茄白粉病</view>
+</view>
+<view style='display:flex;justify-content:center;'>
+<view bindtap='pressView' class="hot-content" data-text="苹果黑星病">苹果黑星病</view>
+<view bindtap='pressView' class="hot-content" data-text="葡萄褐斑病">葡萄褐斑病</view>
+<view bindtap='pressView' class="hot-content" data-text="樱桃">樱桃</view>
+</view>
+</view>
+
